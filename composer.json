@@ -1,0 +1,9 @@
+{
+	"name": "applab-wp/mt-exam",
+	"description": "Exam Management WordPress plugin",
+	"type": "wordpress-plugin",
+	"require": {
+		"php": ">=7.4",
+		"dompdf/dompdf": "^2.0"
+	}
+}

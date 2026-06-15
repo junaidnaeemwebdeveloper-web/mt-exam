@@ -15,6 +15,7 @@ define( 'EM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 require_once EM_PLUGIN_DIR . 'includes/class-em-term-admin.php';
 require_once EM_PLUGIN_DIR . 'includes/class-em-exam-admin.php';
+require_once EM_PLUGIN_DIR . 'includes/class-em-result-admin.php';
 
 // Custom Post Types and Taxonomy
 class EM_CPT {
@@ -97,5 +98,6 @@ function em_init() {
 	EM_CPT::init();
 	EM_Term_Admin::init();
 	EM_Exam_Admin::init();
+	EM_Result_Admin::init();
 }
 add_action( 'plugins_loaded', 'em_init' );

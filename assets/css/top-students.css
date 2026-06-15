@@ -1,0 +1,199 @@
+.em-top-students {
+	--em-top-students-bg: #f4f7fb;
+	--em-top-students-card: #ffffff;
+	--em-top-students-border: #e4e9f2;
+	--em-top-students-text: #1f2937;
+	--em-top-students-muted: #6b7280;
+	--em-top-students-accent: #2563eb;
+	--em-top-students-gold: #f59e0b;
+	--em-top-students-silver: #94a3b8;
+	--em-top-students-bronze: #d97706;
+	--em-top-students-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+	--em-top-students-radius: 16px;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 1.5rem;
+	font-family: inherit;
+	color: var(--em-top-students-text);
+}
+
+.em-top-students__header {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.em-top-students__title {
+	margin: 0 0 0.5rem;
+	font-size: clamp(1.75rem, 2vw, 2.25rem);
+	line-height: 1.2;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}
+
+.em-top-students__subtitle {
+	margin: 0;
+	color: var(--em-top-students-muted);
+	font-size: 1rem;
+}
+
+.em-top-students__grid {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.em-top-students__term {
+	background: var(--em-top-students-card);
+	border: 1px solid var(--em-top-students-border);
+	border-radius: var(--em-top-students-radius);
+	box-shadow: var(--em-top-students-shadow);
+	overflow: hidden;
+}
+
+.em-top-students__term-header {
+	padding: 1.25rem 1.5rem;
+	background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+	border-bottom: 1px solid var(--em-top-students-border);
+}
+
+.em-top-students__term-title {
+	margin: 0;
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: var(--em-top-students-text);
+}
+
+.em-top-students__term-dates {
+	margin: 0.35rem 0 0;
+	font-size: 0.875rem;
+	color: var(--em-top-students-muted);
+}
+
+.em-top-students__list {
+	list-style: none;
+	margin: 0;
+	padding: 1rem;
+	display: grid;
+	gap: 0.75rem;
+}
+
+.em-top-students__item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	border: 1px solid var(--em-top-students-border);
+	border-radius: 12px;
+	background: #fff;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.em-top-students__item:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.em-top-students__rank {
+	flex: 0 0 3rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #eef2ff;
+	color: var(--em-top-students-accent);
+	font-weight: 700;
+	font-size: 0.875rem;
+}
+
+.em-top-students__item--rank-1 .em-top-students__rank {
+	background: linear-gradient(135deg, #fde68a 0%, #f59e0b 100%);
+	color: #78350f;
+	box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+}
+
+.em-top-students__item--rank-2 .em-top-students__rank {
+	background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
+	color: #334155;
+	box-shadow: 0 4px 12px rgba(148, 163, 184, 0.35);
+}
+
+.em-top-students__item--rank-3 .em-top-students__rank {
+	background: linear-gradient(135deg, #fdba74 0%, #d97706 100%);
+	color: #7c2d12;
+	box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+.em-top-students__content {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.em-top-students__student-name {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.3;
+	word-break: break-word;
+}
+
+.em-top-students__stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+
+.em-top-students__stat {
+	display: inline-flex;
+	flex-direction: column;
+	min-width: 4.5rem;
+	padding: 0.5rem 0.75rem;
+	border-radius: 10px;
+	background: var(--em-top-students-bg);
+}
+
+.em-top-students__stat-value {
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--em-top-students-accent);
+	line-height: 1.2;
+}
+
+.em-top-students__stat-label {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--em-top-students-muted);
+	margin-top: 0.15rem;
+}
+
+.em-top-students__empty {
+	margin: 0;
+	padding: 1.25rem 1.5rem;
+	border-radius: 12px;
+	background: #fff7ed;
+	border: 1px solid #fed7aa;
+	color: #9a3412;
+	text-align: center;
+}
+
+@media (max-width: 640px) {
+	.em-top-students {
+		padding: 1rem;
+	}
+
+	.em-top-students__item {
+		align-items: flex-start;
+	}
+
+	.em-top-students__stats {
+		width: 100%;
+	}
+
+	.em-top-students__stat {
+		flex: 1;
+	}
+}

@@ -17,6 +17,7 @@ require_once EM_PLUGIN_DIR . 'includes/class-em-term-admin.php';
 require_once EM_PLUGIN_DIR . 'includes/class-em-exam-admin.php';
 require_once EM_PLUGIN_DIR . 'includes/class-em-result-admin.php';
 require_once EM_PLUGIN_DIR . 'includes/class-em-exam-ajax.php';
+require_once EM_PLUGIN_DIR . 'includes/class-em-top-students-shortcode.php';
 
 // Custom Post Types and Taxonomy
 class EM_CPT {
@@ -101,5 +102,6 @@ function em_init() {
 	EM_Exam_Admin::init();
 	EM_Result_Admin::init();
 	EM_Exam_Ajax::init();
+	EM_Top_Students_Shortcode::init();
 }
 add_action( 'plugins_loaded', 'em_init' );

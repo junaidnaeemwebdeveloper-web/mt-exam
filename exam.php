@@ -16,6 +16,7 @@ define( 'EM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 require_once EM_PLUGIN_DIR . 'includes/class-em-term-admin.php';
 require_once EM_PLUGIN_DIR . 'includes/class-em-exam-admin.php';
 require_once EM_PLUGIN_DIR . 'includes/class-em-result-admin.php';
+require_once EM_PLUGIN_DIR . 'includes/class-em-result-import.php';
 require_once EM_PLUGIN_DIR . 'includes/class-em-exam-ajax.php';
 require_once EM_PLUGIN_DIR . 'includes/class-em-top-students-shortcode.php';
 
@@ -101,6 +102,7 @@ function em_init() {
 	EM_Term_Admin::init();
 	EM_Exam_Admin::init();
 	EM_Result_Admin::init();
+	EM_Result_Import::init();
 	EM_Exam_Ajax::init();
 	EM_Top_Students_Shortcode::init();
 }

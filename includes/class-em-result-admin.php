@@ -436,6 +436,25 @@ class EM_Result_Admin {
 	}
 
 	/**
+	 * Merge student marks without reindexing numeric student IDs.
+	 *
+	 * array_merge() must not be used here because it renumbers integer keys.
+	 *
+	 * @param array $existing_marks Existing marks keyed by student ID.
+	 * @param array $new_marks      New marks keyed by student ID.
+	 * @return array<int, float>
+	 */
+	public static function merge_student_marks( array $existing_marks, array $new_marks ) {
+		$merged = self::sanitize_marks_meta( $existing_marks );
+
+		foreach ( self::sanitize_marks_meta( $new_marks ) as $student_id => $mark ) {
+			$merged[ $student_id ] = $mark;
+		}
+
+		return $merged;
+	}
+
+	/**
 	 * Validate a mark is within the allowed range.
 	 *
 	 * @param float $mark Mark value.
